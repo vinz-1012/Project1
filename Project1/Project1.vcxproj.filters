@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bai1.cpp">
+    <ClCompile Include="datghe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="library.h">
