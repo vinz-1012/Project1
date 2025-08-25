@@ -42,7 +42,6 @@ struct IntList {
 int main() {
     IntList list;
 	 list.add(5);
-	 list.insert(10, 1);
-	 list.print();
+	 
 	
 }
