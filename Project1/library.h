@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <map>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <queue>
+#include <stack>
+#include <deque>
+#include <list>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+#include <numeric>
+#include <bitset>
+#include <tuple>
+#include <utility>
+#include <functional>
+#include <chrono>
+#include <thread>
+using namespace std;
