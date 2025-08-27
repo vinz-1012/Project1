@@ -1,48 +1,46 @@
 #include "library.h"
 using namespace std;
-struct IntList {
-    int values[100] = {};
-    int right = -1;
 
-    int getValue(int ind) {
-        return values[ind];
-    }
-
-    int getSize() {
-        return right + 1;
-    }
-
-    void add(int v) {
-        right++;
-        values[right] = v;
-    }
-
-    void print() {
-        for (int i = 0; i <= right; i++) {
-            cout << values[i] << ", ";
-        }
-        cout << "\n";
-    }
-
-    void insert(int v, int ind) {
-        for (int i = right + 1; i > ind; i--) {
-            values[i] = values[i - 1];
-        }
-        values[ind] = v;
-        right++;
-    }
-
-    void removeAt(int ind) {
-        for (int i = ind; i < right; i++) {
-            values[i] = values[i + 1];
-        }
-        right--;
-    }
-};
 int main() {
-    IntList list;
-	 list.add(5);
-	 list.insert(10, 3);
-	 list.print();
-	
+    char ghe[5][5];
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 5; j++)
+            ghe[i][j] = 'O';
+
+    int chon = 0;
+    while (chon != 3) {
+        cout << "\nSo do ghe:\n";
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++)
+                cout << ghe[i][j] << " ";
+            cout << endl;
+        }
+
+        cout << "1. Dat ghe\n2. Huy ghe\n3. Thoat\nChon: ";
+        cin >> chon;
+
+        if (chon == 1 || chon == 2) {
+            int hang, cot;
+            cout << "Nhap hang (1-5): ";
+            cin >> hang;
+            cout << "Nhap cot (1-5): ";
+            cin >> cot;
+            hang--; cot--;
+
+            if (hang < 0 || hang >= 5 || cot < 0 || cot >= 5) {
+                cout << "Vi tri khong hop le!\n";
+            }
+            else if (chon == 1) {
+                if (ghe[hang][cot] == 'X') cout << "Ghe da duoc dat!\n";
+                else { ghe[hang][cot] = 'X'; cout << "Dat thanh cong!\n"; }
+            }
+            else {
+                if (ghe[hang][cot] == 'O') cout << "Ghe dang trong!\n";
+                else { ghe[hang][cot] = 'O'; cout << "Huy thanh cong!\n"; }
+            }
+        }
+    }
+
+    return 0;
 }
+
