@@ -52,7 +52,7 @@ int main() {
         else if (chon == 2) {
             int hang, cot;
             cout << "Nhap hang (1-5): "; cin >> hang;
-            cout << "Nhap cot (1-5): "; cin >> cot;
+            cout << "Nhap cot (1-4): "; cin >> cot;
             hang--; cot--;
 
             if (hang < 0 || hang >= 5 || cot < 0 || cot >= 5) {
